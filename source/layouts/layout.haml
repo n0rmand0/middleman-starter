@@ -1,0 +1,20 @@
+!!! 5
+%html{ :xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en" }
+  %head
+    %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE-edge" }
+    %meta{ "http-equiv" => "Content-Type", :content => "text/html", :charset => "utf-8" }
+    %meta{ name: "viewport", content: "width=device-width,initial-scale=1,user-scalable=no" }
+    %meta{ name: "Description", content: description ||="" }
+    %meta{ name: "Keywords", content: keywords ||="" }
+
+    %title= locals[:title].present? ? title : "~MISSING~"
+
+    %link{ rel: "icon", type: "image/png", href: "/images/favicon.png"}
+
+    = javascript_include_tag "all"
+    = stylesheet_link_tag  "all"
+
+  %body{ class: body_class ||=""}
+    = partial "shared/header"
+    = yield
+    = partial "shared/footer"

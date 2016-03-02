@@ -1,0 +1,58 @@
+// VARIABLES - Set up common properties and styles
+////////////////////////////////////////////////////////////////////////////////
+
+// Typography
+$base-font-family:'Helvetica', sans-serif;
+$header-font-family: $base-font-family;
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$header-line-height: 1.25;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1rem;
+$small-spacing: $base-spacing / 2;
+$large-spacing: $base-spacing * 2.5;
+$base-z-index: 0;
+
+// Colors
+$blue: #52B0F9;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+$red: #D3374E;
+$light-red: #FBE3E4;
+$yellow: #FDE34D;
+$light-yellow: #FFF6BF;
+$light-green: #E6EFC2;
+
+// Font Colors
+$base-font-color: $dark-gray;
+$inverse-font-color: #fff;
+$accent-color: $blue;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: $accent-color;
+
+// Link Colors
+$base-link-color: $accent-color;
+$hover-link-color: darken($accent-color, 15);
+$inverse-base-link-color: #dfdfdf;
+$inverse-hover-link-color: #fff;
+
+// Border color
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($accent-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
