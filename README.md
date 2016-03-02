@@ -3,9 +3,7 @@
 ## Get Started
 
 - Run Middleman `middleman server`
-- To use Gulp:
-  - Install gulp & dependencies `npm install`
-  - activate external_pipeline in config.rb
+- To use Gulp, install gulp & dependencies `npm install`
 
 ## Features
 
