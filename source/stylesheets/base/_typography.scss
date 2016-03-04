@@ -19,7 +19,7 @@ h6 {
   font-family: $header-font-family;
   line-height: $header-line-height;
   font-weight: 100;
-  color: $accent-color;
+  color: $action-color;
   margin: 0 0 ($base-spacing / 2);
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
 }
@@ -55,15 +55,15 @@ p {
 
 a {
   transition: color, 0.2s;
-  color: $base-link-color;
+  color: $action-color;
   text-decoration: none;
 
   &:hover {
-    color: $hover-link-color;
+    color: $action-hover-color;
   }
 
   &:active, &:focus {
-    color: $hover-link-color;
+    color: $action-hover-color;
     outline: none;
   }
 }
@@ -104,14 +104,14 @@ cite {
   color: $inverse-font-color;
 
   a {
-    color: $inverse-base-link-color;
+    color: $inverse-action-color;
 
     &:hover {
-      color: $inverse-hover-link-color;
+      color: $inverse-hover-color;
     }
 
     &:active, &:focus {
-      color: $inverse-hover-link-color;
+      color: $inverse-hover-color;
       outline: none;
     }
   }

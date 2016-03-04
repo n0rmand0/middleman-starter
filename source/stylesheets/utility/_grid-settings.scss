@@ -6,16 +6,16 @@
 // Neat overrides
 $gutter: 80px;
 $grid-columns: 12;
-$max-width: 1000px;
+$max-width: 1200px;
 
 // Neat Breakpoints
-$extra-large: new-breakpoint(min-width 1500px 12);
+$extra-large: new-breakpoint(min-width ($max-width +1) 12);
 // ipad landscape & desktop:
-$large: new-breakpoint(min-width ($max-width+1) 12);
+$large: new-breakpoint(max-width $max-width 12);
 // ipad portrait:
-$medium: new-breakpoint(max-width $max-width 12);
+$medium: new-breakpoint(max-width 1000px 12);
 // iphone landscape:
-$small: new-breakpoint(max-width 700px 6);
+$small: new-breakpoint(max-width 750px 6);
 // iphone portrait:
 $extra-small: new-breakpoint(max-width 450px 6);
 

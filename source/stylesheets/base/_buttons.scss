@@ -41,30 +41,28 @@
 .btn,
 #{$all-buttons} {
   @extend %btn-base;
-  color: $base-link-color;
+  color: $action-color;
   background-color: transparent;
-  border-color: $base-link-color;
+  border-color: $action-color;
 
   &:hover,
-  &:focus,
   &:active,
   &.active{
-    background-color: lighten($hover-link-color, 45);
+    background-color: lighten($action-color, 30);
   }
 }
 
 // Alternate btn
 .btn-alt {
   @extend %btn-base;
-  color: #fff !important;
+  color: $inverse-font-color !important;
   background-color: transparent;
   border-color: #fff;
 
   &:hover,
-  &:focus,
   &:active,
   &.active{
-    background-color: darken($base-link-color, 5);;
+    background-color: rgba($inverse-action-color, .2 );
   }
 }
 
