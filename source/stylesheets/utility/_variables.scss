@@ -19,17 +19,17 @@ $small-spacing: $base-spacing / 2;
 $large-spacing: $base-spacing * 2.5;
 
 // Colors
-$color: #f7cac9;
+$base-color: #f7cac9;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$action-color: darken(#f7cac9, 10) ;
+$action-color: darken($base-color, 10) ;
 $action-hover-color: darken($action-color, 20);
 $inverse-font-color: #fff;
-$inverse-action-color: lighten($color, 5);
+$inverse-action-color: lighten($base-color, 5);
 $inverse-hover-color: darken($inverse-action-color, 5);
 
 // Background Colors
