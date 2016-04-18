@@ -42,38 +42,34 @@ helpers do
 end
 
 # General configuration
-
 set :css_dir, 'stylesheets'
+# ignore '/stylesheets/**/*'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 sprockets.append_path  "#{root}/bower_components"
 sprockets.append_path "#{root}/source/javascripts/vendor"
 
-# activate :external_pipeline,
-#   name: :gulp,
-#   command: "gulp",
-#   source: "/source",
-#   latency: 0
-
-# Reload the browser automatically whenever files change
-configure :development do
-  activate :livereload
-end
-
+activate :external_pipeline,
+  name: :gulp,
+  command: build? ? 'gulp production' : 'gulp',
+  source: ".tmp",
+  latency: 1
 
 # Build-specific configuration
 configure :build do
 
   # Add vendor prefixes
-  activate :autoprefixer do |config|
-    config.browsers = ['last 2 versions', 'Explorer >= 9']
-  end
+  # activate :autoprefixer do |config|
+  #   config.browsers = ['last 2 versions', 'Explorer >= 9']
+  # end
+  # activate :minify_css
+
   activate :directory_indexes
   activate :gzip
-  activate :minify_css
   activate :minify_javascript
 end
+
 
 ## Deploy your site to more than one configuration using environment variables.
 # https://github.com/middleman-contrib/middleman-deploy
