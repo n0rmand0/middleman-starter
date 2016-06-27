@@ -43,12 +43,14 @@ end
 
 # General configuration
 set :css_dir, 'stylesheets'
-# ignore '/stylesheets/**/*'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
-sprockets.append_path  "#{root}/bower_components"
-sprockets.append_path "#{root}/source/javascripts/vendor"
+ignore 'stylesheets/*.scss'
+
+activate :sprockets
+sprockets.append_path  File.join(root, "bower_components")
+sprockets.append_path File.join(root, "/source/javascripts/vendor")
 
 activate :external_pipeline,
   name: :gulp,
@@ -58,16 +60,11 @@ activate :external_pipeline,
 
 # Build-specific configuration
 configure :build do
-
-  # Add vendor prefixes
-  # activate :autoprefixer do |config|
-  #   config.browsers = ['last 2 versions', 'Explorer >= 9']
-  # end
-  # activate :minify_css
-
+  activate :asset_hash
   activate :directory_indexes
   activate :gzip
   activate :minify_javascript
+  activate :minify_css
 end
 
 
