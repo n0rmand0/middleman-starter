@@ -10,15 +10,16 @@
 @import "utility/mixins";
 @import "utility/extends";
 @import "utility/fonts";
- 
+@import "utility/animations";
+
 // BASE
 @import "base/normalize";
-@import "base/typography";
+@import "base/buttons";
 @import "base/forms";
 @import "base/lists";
+@import "base/media";
 @import "base/tables";
-@import "base/buttons";
-@import "base/animations";
+@import "base/typography";
 
 // LAYOUT
 @import "layouts/grid";

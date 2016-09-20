@@ -46,7 +46,6 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
-ignore 'stylesheets/*.scss'
 
 activate :sprockets
 sprockets.append_path  File.join(root, "bower_components")
@@ -75,17 +74,17 @@ end
 # when 'staging'
 #   activate :deploy do |deploy|
 #     deploy.deploy_method = :rsync
-#     deploy.host = "chuckd-deploy"
-#     deploy.path = "/var/www/vhosts/dev.carney.co/sites/test"
-#     deploy.user = "passenger"
-#     deploy.port = 2246
+#     deploy.host = ""
+#     deploy.path = ""
+#     deploy.user = ""
+#     deploy.port =
 #   end
 # when 'production'
 #   activate :deploy do |deploy|
 #     deploy.deploy_method = :rsync
-#     deploy.host = "dr-dre"
-#     deploy.path = "/var/www/vhosts/dev.carney.co/sites/test"
-#     deploy.user = "passenger"
-#     deploy.port = 3254
+#     deploy.host = ""
+#     deploy.path = ""
+#     deploy.user = ""
+#     deploy.port =
 #   end
 # end

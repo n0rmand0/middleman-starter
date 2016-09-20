@@ -1,9 +1,7 @@
 // BASE TYPOGRAPHY STYLES
-////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
 
 body {
-  -webkit-font-smoothing: antialiased;
-  background-color: $base-background-color;
   color: $base-font-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
@@ -16,12 +14,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $header-font-family;
-  line-height: $header-line-height;
-  font-weight: 100;
-  color: $action-color;
-  margin: 0 0 ($base-spacing / 2);
-  text-rendering: optimizeLegibility; // Fix the character spacing for headings
+  font-family: $heading-font-family;
+  font-size: modular-scale(1);
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing;
 }
 
 
@@ -54,16 +50,14 @@ p {
 }
 
 a {
-  transition: color, 0.2s;
+  transition: color 0.2s;
   color: $action-color;
   text-decoration: none;
 
+  &:active,
+  &:focus,
   &:hover {
-    color: $action-hover-color;
-  }
-
-  &:active, &:focus {
-    color: $action-hover-color;
+    color: shade($action-color, 30%);
     outline: none;
   }
 }
@@ -76,42 +70,19 @@ hr {
   margin: $base-spacing 0;
 }
 
-img,
-picture {
-  margin: 0;
-  max-width: 100%;
-}
-
-blockquote {
-  padding: 0;
-  margin: 0 0 1em 0;
-  font-weight: 800;
-  font-size: 1.5em;
-}
-
-cite {
-  color: lighten($base-font-color, 25);
-  font-style: italic;
-
-  &:before {
-    content: "\2014 \00A0";
-  }
-}
 
 // Alternate section colors
-////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
 %inverse {
   color: $inverse-font-color;
 
   a {
     color: $inverse-action-color;
 
-    &:hover {
-      color: $inverse-hover-color;
-    }
-
-    &:active, &:focus {
-      color: $inverse-hover-color;
+    &:active,
+    &:focus,
+    &:hover  {
+      color: tint($inverse-action-color, 60%);
       outline: none;
     }
   }
