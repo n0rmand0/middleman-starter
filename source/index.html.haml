@@ -23,20 +23,6 @@
       - **middleman-deploy** - [GitHub](https://github.com/middleman-contrib/middleman-deploy) - Deploy a middleman built site over rsync, ftp, stfp, or git (e.g. gh-pages on github).
       - **nav_link helper** - Automatically adds "active" class to current nav links.
 
-
-
-%hr
-%section.section-primary
-  .container
-    %h1#main Style Guide
-
-    %hr
-    %h1 Buttons
-    =link_to "Button", "#", class: "btn--lg"
-    =link_to "Button", "#", class: "btn"
-    =link_to "Button", "#", class: "btn--sm"
-    =link_to "Button", "#", class: "btn--xs"
-
     %hr
     %h2 Nav Links
     %p The nav_link helper adds an 'active' class if the target class matches the body.
@@ -47,26 +33,20 @@
       =nav_link "nav link", "#", "another-page", class: "btn--xs"
       =nav_link "nav link", "#", "another-page", class: "btn--xs"
 
-%section.section-secondary
-  .container
-    .l-long
-      %h2
-        \%inverse section
-      %p
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      =link_to "Link", "#", class: "btn-link"
-      %br
-      %br
-      =link_to "Button", "#", class: "btn--lg"
-      =link_to "Button", "#", class: "btn"
-      =link_to "Button", "#", class: "btn--sm"
-      =link_to "Button", "#", class: "btn--xs"
-
-    .l-short
-      =image_tag "fpo.jpg", class: "", alt: ""
-
+%hr
 %section.section-primary
   .container
+    %h1#main Style Guide
+
+    %hr
+    %h2 Buttons
+    =link_to "Button", "#", class: "btn--lg"
+    =link_to "Button", "#", class: "btn"
+    =link_to "Button", "#", class: "btn--sm"
+    =link_to "Button", "#", class: "btn--xs"
+
+    %hr
+
     %h1#headings Headings
     %h1 h1. Heading
     %h2 h2. Heading
@@ -156,7 +136,8 @@
           %label{:for => "file"} File Input:
           %input.file{:name => "file", :type => "file"}
         %p
-          %input{:type => "submit", :value => "Submit"}/
+          %button{:type => "submit"} Submit
+
     %hr
     %h1#tables Tables
     %table{:cellpadding => "0", :cellspacing => "0"}
@@ -177,3 +158,18 @@
           %td Division 1
           %td Division 2
           %td Division 3
+
+%section.section-secondary
+  .container
+    .l-long
+      %h2
+        \%inverse section
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      =link_to "Link", "#", class: "btn-link"
+      %br
+      %br
+      =link_to "Button", "#", class: "btn--lg"
+      =link_to "Button", "#", class: "btn"
+      =link_to "Button", "#", class: "btn--sm"
+      =link_to "Button", "#", class: "btn--xs"

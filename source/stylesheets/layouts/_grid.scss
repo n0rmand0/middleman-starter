@@ -13,8 +13,20 @@
   }
 }
 
-// third layout
-.l-short {
+.l-main {
+  @include span-columns(8);
+  @include clearfix;
+  margin-bottom: 0;
+  @include media($small) {
+    @include span-columns(6);
+    margin-bottom: $large-spacing;
+  }
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.l-sidebar{
   @include span-columns(4);
   @include clearfix;
   @include omega(3n);
@@ -35,7 +47,6 @@
   }
 }
 
-// half layout
 .l-split {
   @include span-columns(6);
   @include clearfix;
@@ -56,31 +67,6 @@
   }
 }
 
-// two-third layout
-.l-long {
-  @include span-columns(8);
-  @include clearfix;
-  margin-bottom: 0;
-  @include media($small) {
-    @include span-columns(6);
-    margin-bottom: $large-spacing;
-  }
-  > *:last-child {
-    margin-bottom: 0;
-  }
-}
-
 .l-omega {
   @include omega;
-}
-
-// Alternate (float) the first child of odd parent
-.l-alternate {
-  @include clearfix;
-  &:nth-child(odd) {
-    > *:first-child {
-      margin-right: 0;
-      float: right;
-    }
-  }
 }
