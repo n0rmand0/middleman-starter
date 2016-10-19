@@ -4,13 +4,13 @@
     :markdown
       # Middleman Starter
 
-      ## Get Started
+      ### Get Started
 
       - Run Middleman `middleman server`
       - To use Gulp, install gulp & dependencies `npm install`
 
 
-      ## Features
+      ### Features
 
       - **Middleman 4** - [middlemanapp.com](https://middlemanapp.com/)
       - **Bourbon** - [bourbon.io](http://bourbon.io/)
@@ -24,7 +24,7 @@
       - **nav_link helper** - Automatically adds "active" class to current nav links.
 
     %hr
-    %h2 Nav Links
+    %h3 Nav Links
     %p The nav_link helper adds an 'active' class if the target class matches the body.
     %pre =nav_link "link text", "url", "target-class", class: "btn"
     %p
@@ -33,13 +33,9 @@
       =nav_link "nav link", "#", "another-page", class: "btn--xs"
       =nav_link "nav link", "#", "another-page", class: "btn--xs"
 
-%hr
-%section.section-primary
-  .container
-    %h1#main Style Guide
-
     %hr
-    %h2 Buttons
+
+    %h3 Buttons
     =link_to "Button", "#", class: "btn--lg"
     =link_to "Button", "#", class: "btn"
     =link_to "Button", "#", class: "btn--sm"
@@ -47,7 +43,7 @@
 
     %hr
 
-    %h1#headings Headings
+    %h3#headings Headings
     %h1 h1. Heading
     %h2 h2. Heading
     %h3 h3. Heading
@@ -55,7 +51,7 @@
     %h5 h5. Heading
     %h6 h6. Heading
     %hr
-    %h1#paragraph Paragraph
+    %h3#paragraph Paragraph
     %p
       Lorem ipsum dolor sit amet,
       %a{:href => "#", :title => "test link"} test link
@@ -65,22 +61,22 @@
       %em emphasis
       consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
     %hr
-    %h1#list_types List Types
-    %h3 Definition List
+    %h3#list_types List Types
+    %h4 Definition List
     %dl
       %dt Definition List Title
       %dd This is a definition list division.
-    %h3 Ordered List
+    %h4 Ordered List
     %ol
       %li List Item 1
       %li List Item 2
       %li List Item 3
-    %h3 Unordered List
+    %h4 Unordered List
     %ul
       %li List Item 1
       %li List Item 2
       %li List Item 3
-    %h3 %blank-list List
+    %h4 %blank-list List
     %ul.blank-list
       %li List Item 1
       %li List Item 2
@@ -88,7 +84,7 @@
     %hr
     %fieldset
       %form
-        %h2 Form Elements
+        %h3 Form Elements
         %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui.
         %p
           %label{:for => "text_field"} Text Field:
@@ -136,7 +132,7 @@
           %button{:type => "submit"} Submit
 
     %hr
-    %h1#tables Tables
+    %h3#tables Tables
     %table{:cellpadding => "0", :cellspacing => "0"}
       %tbody
         %tr
