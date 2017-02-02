@@ -2,8 +2,8 @@
 
 ## Get Started
 
+- Install gulp & dependencies: `npm install`
 - Run Middleman: `middleman server`
-- To use Gulp, install gulp & dependencies: `npm install`
 
 ## Features
 

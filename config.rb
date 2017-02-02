@@ -48,7 +48,7 @@ set :images_dir, 'images'
 
 
 activate :sprockets
-sprockets.append_path  File.join(root, "/source/bower_components")
+sprockets.append_path  File.join(root, "/bower_components")
 sprockets.append_path File.join(root, "/source/javascripts/vendor")
 
 activate :external_pipeline,

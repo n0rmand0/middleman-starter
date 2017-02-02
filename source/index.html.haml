@@ -1,14 +1,13 @@
 
-%section.section-primary
-  .container.markdown
+%section.section--primary
+  .container
     :markdown
       # Middleman Starter
 
       ### Get Started
 
+      - Install gulp & dependencies `npm install`
       - Run Middleman `middleman server`
-      - To use Gulp, install gulp & dependencies `npm install`
-
 
       ### Features
 
@@ -26,20 +25,20 @@
     %hr
     %h3 Nav Links
     %p The nav_link helper adds an 'active' class if the target class matches the body.
-    %pre =nav_link "link text", "url", "target-class", class: "btn"
+    %pre =nav_link "link text", "url", "target-class", class: "button"
     %p
-      =nav_link "active nav link", "#", "home", class: "btn--xs"
-      =nav_link "nav link", "#", "another-page", class: "btn--xs"
-      =nav_link "nav link", "#", "another-page", class: "btn--xs"
-      =nav_link "nav link", "#", "another-page", class: "btn--xs"
+      =nav_link "active nav link", "#", "home", class: "button--tiny"
+      =nav_link "nav link", "#", "another-page", class: "button--tiny"
+      =nav_link "nav link", "#", "another-page", class: "button--tiny"
+      =nav_link "nav link", "#", "another-page", class: "button--tiny"
 
     %hr
 
     %h3 Buttons
-    =link_to "Button", "#", class: "btn--lg"
-    =link_to "Button", "#", class: "btn"
-    =link_to "Button", "#", class: "btn--sm"
-    =link_to "Button", "#", class: "btn--xs"
+    =link_to "Button", "#", class: "button--large"
+    =link_to "Button", "#", class: "button"
+    =link_to "Button", "#", class: "button--small"
+    =link_to "Button", "#", class: "button--tiny"
 
     %hr
 
@@ -152,17 +151,17 @@
           %td Division 2
           %td Division 3
 
-%section.section-secondary
+%section.section--secondary
   .container
     .l-long
       %h2
         \%inverse section
       %p
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      =link_to "Link", "#", class: "btn-link"
+      =link_to "Link", "#", class: "link"
       %br
       %br
-      =link_to "Button", "#", class: "btn--lg"
-      =link_to "Button", "#", class: "btn"
-      =link_to "Button", "#", class: "btn--sm"
-      =link_to "Button", "#", class: "btn--xs"
+      =link_to "Button", "#", class: "button--large"
+      =link_to "Button", "#", class: "button"
+      =link_to "Button", "#", class: "button--small"
+      =link_to "Button", "#", class: "button--tiny"
