@@ -4,17 +4,17 @@
     %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE-edge" }
     %meta{ "http-equiv" => "Content-Type", :content => "text/html", :charset => "utf-8" }
     %meta{ name: "viewport", content: "width=device-width,initial-scale=1,user-scalable=no" }
-    %meta{ name: "Description", content: description ||="" }
-    %meta{ name: "Keywords", content: keywords ||="" }
+    %meta{ name: "Description", content: current_page.data.description ||="" }
+    %meta{ name: "Keywords", content: current_page.data.keywords ||="" }
 
-    %title= locals[:title].present? ? title : "~MISSING~"
+    %title= current_page.data.title.present? ? current_page.data.title : "~MISSING~"
 
     %link{ rel: "icon", type: "image/png", href: "/images/favicon.png"}
 
     = javascript_include_tag "all"
     = stylesheet_link_tag  "all"
 
-  %body{ class: body_class ||=""}
+  %body{ class: current_page.data.body_class ||= "" }
     = partial "shared/header"
     = yield
     = partial "shared/footer"

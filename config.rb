@@ -16,14 +16,6 @@ page '/*.txt', layout: false
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
-page "/",
-  locals: {
-    body_class: "home",
-    title: "",
-    keywords: "",
-    description: ""
-  }
-
 
 ###
 # Helpers
@@ -34,8 +26,8 @@ helpers do
   # automatically add active state to links
   def nav_link(link_text, url, target_class, options = {})
     options[:class] ||= ""
-    current_page.locals[:body_class] ||=""
-    options[:class] << " active" if  current_page.locals[:body_class].include? target_class
+    current_page.data.body_class ||=""
+    options[:class] << " active" if  current_page.data.body_class.include? target_class
     link_to(link_text, url, options)
   end
 
