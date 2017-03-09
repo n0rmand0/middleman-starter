@@ -7,3 +7,4 @@ var productionTask = function(cb) {
 }
 
 gulp.task('production', productionTask)
+module.exports = productionTask
