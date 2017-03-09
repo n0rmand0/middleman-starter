@@ -1,0 +1,3 @@
+[submodule "source/stylesheets"]
+	path = source/stylesheets
+	url = git@github.com:n0rmand0/sassy-starter.git
