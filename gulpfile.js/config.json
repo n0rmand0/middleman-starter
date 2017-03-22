@@ -1,0 +1,16 @@
+{
+  "css": {
+    "src": "./source/stylesheets/**/*.{css,scss,sass}",
+    "dest": ".tmp/stylesheets/"
+  },
+
+  "html": {
+    "src": "./source/**/*.{haml,html}"
+  },
+
+  "browserSync": {
+    "proxy": "http://localhost:4567",
+    "notify": true,
+    "startDelay": 1000
+  }
+}

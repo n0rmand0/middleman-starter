@@ -3,8 +3,9 @@ var gulpSequence = require('gulp-sequence')
 
 var productionTask = function(cb) {
   global.production = true;
-  gulpSequence('images', 'css')(cb);
+  gulpSequence('css')(cb);
 }
 
 gulp.task('production', productionTask)
+
 module.exports = productionTask
