@@ -24,6 +24,8 @@ page '/*.txt', layout: false
 helpers do
 
   # automatically add active state to links
+  # example:
+  # =nav_link "link text", "url", "target-class", class: "button"
   def nav_link(link_text, url, target_class, options = {})
     options[:class] ||= ""
     current_page.data.body_class ||=""
