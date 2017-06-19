@@ -1,7 +1,4 @@
-// = require jquery
-// = require modernizr.js
-//= require_tree .
+require('../stylesheets/all.scss');
+// import _ from 'lodash';
 
-$(document).ready(function() {
-
-});
+console.log('gains2');

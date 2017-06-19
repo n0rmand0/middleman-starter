@@ -1,16 +1,32 @@
 {
-  "devDependencies": {
-    "browser-sync": "^2.11.2",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-changed": "^1.3.0",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-if": "^2.0.0",
-    "gulp-notify": "^2.2.0",
-    "gulp-sass": "^2.2.0",
-    "gulp-sequence": "^0.4.5",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-watch": "^4.3.5",
-    "require-dir": "^0.3.0"
+  "name": "middleman-starter",
+  "version": "1.0.0",
+  "description": "## Get Started",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --watch --progress --color"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n0rmand0/middleman-starter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n0rmand0/middleman-starter/issues"
+  },
+  "homepage": "https://github.com/n0rmand0/middleman-starter#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.12",
+    "browser-sync-webpack-plugin": "^1.1.4",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "lodash": "^4.17.4",
+    "node-sass": "^4.5.3",
+    "path": "^0.12.7",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.0.0"
   }
 }

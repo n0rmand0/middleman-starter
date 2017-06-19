@@ -41,13 +41,13 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 
-activate :sprockets
-sprockets.append_path  File.join(root, "/bower_components")
-sprockets.append_path File.join(root, "/source/javascripts/vendor")
+# activate :sprockets
+# sprockets.append_path  File.join(root, "/bower_components")
+# sprockets.append_path File.join(root, "/source/javascripts/vendor")
 
 activate :external_pipeline,
-  name: :gulp,
-  command: build? ? 'gulp production' : 'gulp',
+  name: :webpack,
+  command: build? ? 'yarn build' : 'yarn start',
   source: ".tmp",
   latency: 1
 
