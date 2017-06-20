@@ -1,7 +1,8 @@
 const path = require('path');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-const webpack = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const webpack = require('webpack');
 
 let postCssOptions = [  require('autoprefixer')() ];
 if ( process.env.NODE_ENV === 'production' ) {
@@ -45,6 +46,9 @@ let webpackConfig = {
 
   plugins: [
     // new webpack.HotModuleReplacementPlugin(), // Enable HMR
+    new CleanWebpackPlugin(
+      [".tmp"]
+    ),
     new BrowserSyncPlugin({
        host: 'localhost',
        port: 3000,
