@@ -4,7 +4,8 @@
   "description": "## Get Started",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --watch --progress --color"
+    "start": "webpack --watch --progress --color ",
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -22,11 +23,17 @@
     "browser-sync-webpack-plugin": "^1.1.4",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",
-    "lodash": "^4.17.4",
     "node-sass": "^4.5.3",
     "path": "^0.12.7",
+    "postcss-loader": "^2.0.6",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
-    "webpack": "^3.0.0"
-  }
+    "uglify-js": "2.8.23",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }
