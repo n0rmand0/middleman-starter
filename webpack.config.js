@@ -4,17 +4,29 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const webpack = require('webpack');
 
+let config = {
+  "entry":  [
+    "./source/javascripts/all.js",
+    "./source/stylesheets/all.scss"
+  ],
+  output: ".tmp",
+  "proxy": "http://localhost:4567",
+  "watch": [
+    "./source/**/*.haml"
+  ]
+}
+
 let postCssOptions = [  require('autoprefixer')() ];
 if ( process.env.NODE_ENV === 'production' ) {
   postCssOptions.push( require('cssnano')() )
 }
 
 let webpackConfig = {
-  entry: './source/javascripts/all.js',
+  entry: config.entry,
 
   output: {
     filename: 'all.js',
-    path: path.resolve(__dirname, '.tmp')
+    path: path.resolve(__dirname, config.output)
   },
 
   module: {
@@ -47,19 +59,20 @@ let webpackConfig = {
   plugins: [
     // new webpack.HotModuleReplacementPlugin(), // Enable HMR
     new CleanWebpackPlugin(
-      [".tmp"]
+      [config.output]
     ),
     new BrowserSyncPlugin({
-       host: 'localhost',
        port: 3000,
-       proxy: 'http://localhost:4567/'
+       proxy: config.proxy,
+       files: config.watch,
+       reloadDelay: 500,
+       notify: false
     },
     {
     //  reload: false
    }),
     new ExtractTextPlugin({
         filename: "all.css",
-        // disable: process.env.NODE_ENV === "development"
     })
   ],
 
