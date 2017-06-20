@@ -1,7 +1,7 @@
 {
   "name": "middleman-starter",
-  "version": "1.0.0",
-  "description": "## Get Started",
+  "version": "2.0.0",
+  "description": "Middleman Starter project with Webpack, and Sassy Starter",
   "main": "index.js",
   "scripts": {
     "start": "webpack --watch --progress --color ",

@@ -16,9 +16,9 @@ let config = {
   ]
 }
 
-let postCssOptions = [  require('autoprefixer')() ];
+let postCssConfig = [ require('autoprefixer')()  ]
 if ( process.env.NODE_ENV === 'production' ) {
-  postCssOptions.push( require('cssnano')() )
+  postCssConfig.push( require('cssnano')() )
 }
 
 let webpackConfig = {
@@ -41,9 +41,7 @@ let webpackConfig = {
           },
           {
             loader: 'postcss-loader',
-            options: {
-              plugins: postCssOptions
-            }
+            options: JSON.stringify(postCssConfig)
           },
           {
               loader: "sass-loader"
@@ -65,7 +63,7 @@ let webpackConfig = {
        port: 3000,
        proxy: config.proxy,
        files: config.watch,
-       reloadDelay: 500,
+       reloadDelay: 800,
        notify: false
     },
     {
